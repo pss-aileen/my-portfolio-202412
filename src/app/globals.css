@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url(./../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css); */
+
+body {
+  font-feature-settings: 'palt';
+}
+
+/* ブログCSS調整 */
+.prose > .contains-task-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.prose > blockquote > p::before,
+.prose > blockquote > p::after {
+  content: '';
+}
+
+.prose ul > li > ul,
+.prose ol > li > ul {
+  margin: 0;
+}
+
+.prose .shiki {
+  /* @apply border; */
+}
+
+.prose :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *))::before {
+  content: '';
+}
+.prose :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *))::after {
+  content: '';
+}
+
+code:not(pre code) {
+  @apply text-sm bg-neutral-100 text-red-700 rounded px-[4px] py-[2px] font-normal !important;
+}
