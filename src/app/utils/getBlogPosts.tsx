@@ -9,7 +9,11 @@ type Metadata = {
 };
 
 function getMdFiles(dir: string) {
-  const files = fs.readdirSync(dir).filter((file) => path.extname(file) == '.md' || '.mdx');
+  const files = fs.readdirSync(dir).filter((file) => {
+    const ext = path.extname(file);
+    return (ext === '.md' || ext === '.mdx') && file !== '.DS_Store';
+  });
+
   return files;
 }
 
