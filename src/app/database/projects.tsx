@@ -6,18 +6,30 @@ import ThumbnailImageGene from './../projects/images/thumbnail-profile-image-gen
 import ThumbnailFirst from './../projects/images/thumbnail-first-contributions.png';
 import ThumbnailRatingStar from './../projects/images/thumbnail-rating-star.png';
 import ThumbnailComingSoon from './../projects/images/thumbnail-coming-soon.png';
+import ThumbnailRecordVoice from './../projects/images/thumbnail-record-voice.png';
 
 export const projects = [
   {
     id: 'my-portfolio',
     title: 'Next.js Portfolio',
     url: {
-      github: '',
-      website: '',
+      github: 'https://github.com/pss-aileen/my-portfolio-202412',
+      website: 'https://pss-aileen.vercel.app/',
     },
     imageUrl: ThumbnailComingSoon,
-    overview: '準備中。',
+    overview: 'このポートフォリオサイトです。画像準備中。',
     tags: ['next', 'ts'],
+  },
+  {
+    id: 'project-record-voice',
+    title: 'Record Voice With Tone.js',
+    url: {
+      github: 'https://github.com/pss-aileen/project-record-voice',
+      website: 'https://pss-aileen.github.io/project-record-voice/',
+    },
+    imageUrl: ThumbnailRecordVoice,
+    overview: 'ブラウザで音声を録音できるアプリです。声の高さを変更できます。',
+    tags: ['ts'],
   },
   {
     id: 'library-star',
